@@ -1,4 +1,4 @@
-# CPnP_A-Consistent-PnP-Solver
+# CPnP-A-Consistent-PnP-Solver
 This is the description of the use of the CPnP solver. 
 
 One can directly run main.m to test the CPnP solver. The main.m mainly includes three parts:
