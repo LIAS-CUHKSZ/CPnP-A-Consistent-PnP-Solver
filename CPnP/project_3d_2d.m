@@ -20,8 +20,8 @@ Xcam_h=[Xcam;1];
 
 Ximg_h=A*Xcam_h;
 
-Ximg(1,1)=Ximg_h(1)/Ximg_h(3)-0.4*A(1,1);
-Ximg(2,1)=Ximg_h(2)/Ximg_h(3)-0.3*A(1,1);
+Ximg(1,1)=Ximg_h(1)/Ximg_h(3);
+Ximg(2,1)=Ximg_h(2)/Ximg_h(3);
 % Ximg=zeros(2,1);
 % Ximg(1)=Xcam(1)/Xcam(3)*0.05;
 % Ximg(2)=Xcam(2)/Xcam(3)*0.05;

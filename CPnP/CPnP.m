@@ -8,10 +8,10 @@
 %         R_GN - the refined estimate of the rotation matrix with Gauss-Newton iterations
 %         t_GN - the refined estimate of the translation vector with Gauss-Newton iterations
 
-% Copyright <2022>  <Guangyang Zeng, Shiyu Chen, Biqiang Mu, Junfeng Wu>
+% Copyright <2022>  <Guangyang Zeng, Shiyu Chen, Biqiang Mu, Guodong Shi, Junfeng Wu>
 % Guangyang Zeng, SLAMLab-CUHKSZ, September 2022
 % zengguangyang@cuhk.edu.cn, https://github.com/SLAMLab-CUHKSZ 
-% reference paper: 
+% paper link: https://arxiv.org/abs/2209.05824
 
 function [R,t,R_GN,t_GN]=CPnP(s,Psens_2D,fx,fy,u0,v0)
 N=length(s);
@@ -30,7 +30,7 @@ end
 J=[pesi';obs']*[pesi obs]/(2*N);
 delta=[M'*M M'*G;G'*M G'*G]/(2*N);
 [~,D]=eig(J,delta);
-root=diag(abs(D));
+root=diag(abs(D))
 sigma_est=min(root);
 
 %% First step: bias-eliminated solution

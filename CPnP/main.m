@@ -1,8 +1,8 @@
 % main codes: give an example to run the CPnP solver
-% Copyright <2022>  <Guangyang Zeng, Shiyu Chen, Biqiang Mu, Junfeng Wu>
+% Copyright <2022>  <Guangyang Zeng, Shiyu Chen, Biqiang Mu, Guodong Shi, Junfeng Wu>
 % Guangyang Zeng, SLAMLab-CUHKSZ, September 2022
 % zengguangyang@cuhk.edu.cn, https://github.com/SLAMLab-CUHKSZ 
-% reference paper: 
+% paper link: https://arxiv.org/abs/2209.05824
 clc
 clear
 rmse_t_1=zeros(1,7);
@@ -11,7 +11,7 @@ rmse_t_GN=zeros(1,7);
 rmse_R_GN=zeros(1,7);
 CRB_R=zeros(1,7);
 CRB_t=zeros(1,7);
-monte_num=100;
+monte_num=1;
 counter=0;
 
 for i=1:7
@@ -30,7 +30,7 @@ for k=1:N
 end
 
 %% estimate the pose and calculate rmse
-[R_1,t_1,R_GN,t_GN]=CPnP(s,Psens_2D,focal,focal,0,0);
+[R_1,t_1,R_GN,t_GN]=CPnP(s,Psens_2D,focal,focal,A(1,3),A(2,3));
 
 rmse_R_1(i)=rmse_R_1(i)+norm(R_1-R,"fro")^2;
 rmse_t_1(i)=rmse_t_1(i)+norm(t-t_1)^2;
