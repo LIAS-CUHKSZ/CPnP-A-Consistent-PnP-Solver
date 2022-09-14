@@ -6,7 +6,7 @@ One can directly run main.m to test the CPnP solver. The main.m mainly includes 
 * Estimate the pose of the camera: estimate the camera pose using CPnP function and calculate the rmse
 * Calculate the CRB: calculate the theoretical lower bound for the rmse of any unbiased PnP solver
 
-The inputs and outputs of the PnP function are as follows:
+The inputs and outputs of the CPnP function are as follows:
 * Inputs
 
 s - a 3×n matrix whose i-th column is the coordinates (in the world frame) of the i-th 3D point
