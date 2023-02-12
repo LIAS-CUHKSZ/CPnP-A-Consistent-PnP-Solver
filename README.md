@@ -1,4 +1,6 @@
 # CPnP-A-Consistent-PnP-Solver
+The cpp implementation of CPnP is available at https://github.com/bereze/CPnP-cpp-version.
+
 This is the description of the use of the CPnP solver. Paper information: G. Zeng, S. Chen, B. Mu, G. Shi, and J. Wu, “CPnP: Consistent pose estimator for perspective-n-point problem with bias elimination,” arXiv:2209.05824, 2022.
 
 One can directly run main.m to test the CPnP solver. The main.m mainly includes three parts:
