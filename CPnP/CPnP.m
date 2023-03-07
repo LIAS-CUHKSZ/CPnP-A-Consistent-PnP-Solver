@@ -11,13 +11,15 @@
 % Copyright <2022>  <Guangyang Zeng, Shiyu Chen, Biqiang Mu, Guodong Shi, Junfeng Wu>
 % Guangyang Zeng, SLAMLab-CUHKSZ, September 2022
 % zengguangyang@cuhk.edu.cn, https://github.com/SLAMLab-CUHKSZ 
-% paper link: https://arxiv.org/abs/2209.05824
+% paper information: Guangyang Zeng, Shiyu Chen, Biqiang Mu, Guodong Shi, and Junfeng Wu. 
+%                    CPnP: Consistent Pose Estimator for Perspective-n-Point Problem with Bias Elimination, 
+%                    IEEE International Conference on Robotics and Automation (ICRA), London, UK, May 2023.
 
 function [R,t,R_GN,t_GN]=CPnP(s,Psens_2D,fx,fy,u0,v0)
 N=length(s);
 bar_s=sum(s,2)/N; 
 Psens_2D=Psens_2D-[u0;v0];
-obs=vec(Psens_2D);  
+obs=Psens_2D(:);  
 pesi=zeros(2*N,11); 
 G=ones(2*N,1);
 W=diag([fx fy]);
@@ -51,7 +53,7 @@ J = zeros(2*N, 6);
 g=WE* (R*s+t);
 h=e3'* (R*s+t);
 f=g./h;
-f=vec(f);
+f=f(:);
 I3=eye(3);
 for k = 1:N  
     J(2*k-1:2*k,:) = (((WE * h(k) - g(:,k)* e3') * [s(2,k)*R(:,3)-s(3,k)*R(:,2) s(3,k)*R(:,1)-s(1,k)*R(:,3) s(1,k)*R(:,2)-s(2,k)*R(:,1) I3]) )/ h(k)^2; 
