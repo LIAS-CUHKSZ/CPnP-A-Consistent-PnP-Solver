@@ -1,7 +1,7 @@
 # CPnP-A-Consistent-PnP-Solver
 The cpp implementation of the CPnP solver is available at https://github.com/bereze/CPnP-cpp-version.
 
-This is the description of the use of the CPnP solver. Paper information: G. Zeng, S. Chen, B. Mu, G. Shi, and J. Wu, “CPnP: Consistent pose estimator for perspective-n-point problem with bias elimination,” arXiv:2209.05824, 2022.
+This is the description of the use of the CPnP solver. Paper information: G. Zeng, S. Chen, B. Mu, G. Shi, and J. Wu, “CPnP: Consistent pose estimator for perspective-n-point problem with bias elimination,” IEEE International Conference on Robotics and Automation (ICRA), London, UK, May 2023.
 
 One can directly run main.m to test the CPnP solver. The main.m mainly includes three parts:
 * Generate input data: generate the intrinsics of the camera, the pose of the camera, the coordinates of 3D points, and the noisy 2D projections. This part uses the codes from Copyright (C) <2007>  <Francesc Moreno-Noguer, Vincent Lepetit, Pascal Fua>. Reference paper: Moreno-Noguer F, Lepetit V, Fua P. Accurate Non-Iterative 𝑂 (𝑛) Solution to the P𝑛P Problem[C]//2007 IEEE 11th International Conference on Computer Vision. IEEE, 2007: 1-8.
