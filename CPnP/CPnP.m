@@ -1,6 +1,6 @@
 % CPnP: a consistent PnP solver
-% Inputs: s - a 3¡Án matrix whose i-th column is the coordinates (in the world frame) of the i-th 3D point
-%        Psens_2D - a 2¡Án matrix whose i-th column is the coordinates of the 2D projection of the i-th 3D point
+% Inputs: s - a 3*n matrix whose i-th column is the coordinates (in the world frame) of the i-th 3D point
+%        Psens_2D - a 2*n matrix whose i-th column is the coordinates of the 2D projection of the i-th 3D point
 %        fx, fy, u0, v0 - intrinsics of the camera, corresponding to the intrinsic matrix K=[fx 0 u0;0 fy v0;0 0 1]
 %
 %Outputs: R - the estimate of the rotation matrix in the first step
