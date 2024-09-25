@@ -8,7 +8,7 @@ This is the description of the use of the CPnP solver. Paper information:
   title={CPnP: Consistent Pose Estimator for Perspective-n-Point Problem with Bias Elimination},
   author={Zeng, Guangyang and Chen, Shiyu and Mu, Biqiang and Shi, Guodong and Wu, Junfeng},
   booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
-  pages={},
+  pages={1940--1946},
   year={2023},
   organization={IEEE}
 }
