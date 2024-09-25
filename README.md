@@ -28,7 +28,7 @@ Psens_2D - a 2×n matrix whose i-th column is the coordinates of the 2D projecti
         
 fx, fy, u0, v0 - intrinsics of the camera, corresponding to the intrinsic matrix K=[fx 0 u0;0 fy v0;0 0 1]
 
-> **Remark**: the units of Psens_2D, fx, fy, u0, and v0 should be consistent, e.g., all in m, all in pixels, or all in normalized image coordinates.
+> **Remark**: the units of Psens_2D, fx, fy, u0, and v0 should be consistent, e.g., all in m, all in pixels, or all in normalized values.
 
 * Outputs
 
